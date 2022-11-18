@@ -4,14 +4,13 @@ import categoryReducer from './categories/categories';
 import initialData from './initialData';
 
 const rootReducer = combineReducers({
-    books: bookReducer,
-    categories: categoryReducer,
-  });
-  
-  const store = configureStore({
-    reducer: rootReducer,
-    preloadedState: initialData,
-  });
-  
-  export default store;
-  
+  books: bookReducer,
+  categories: categoryReducer,
+});
+
+const store = configureStore({
+  reducer: rootReducer,
+  preloadedState: initialData,
+});
+
+export default store;
