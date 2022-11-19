@@ -22,7 +22,7 @@ const BookList = () => {
       {books.map((book, index) => (
         <li key={book.item_id}>
           <div className="bookWrapper">
-          <div className="category">{book.category}</div>
+            <div className="category">{book.category}</div>
             <Book title={book.title} author={book.author} />
             <div className="bookActions">
               <button className="comments" type="button">Comments</button>
@@ -32,8 +32,8 @@ const BookList = () => {
           </div>
           <Progress id={`progress-${index}`} />
           <div className="updateProgress">
-          <div className="label">Current Chapter</div>
-          <div className="chapter">Chapter 1</div>
+            <div className="label">Current Chapter</div>
+            <div className="chapter">Chapter 1</div>
             <button type="button">Update Progress</button>
           </div>
         </li>
