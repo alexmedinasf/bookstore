@@ -29,7 +29,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <div className="user"></div>
+      <div className="user"/>
     </nav>
   );
 };
