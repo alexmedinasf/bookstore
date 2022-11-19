@@ -1,6 +1,6 @@
 import {
-    ADD, UPDATE, REMOVE, GET,
-  } from './actions';
+  ADD, UPDATE, REMOVE, GET,
+} from './actions';
 
 const addBook = (book) => ({
   type: ADD,
@@ -20,9 +20,9 @@ const removeBook = (book) => ({
 const bookReducer = (state = [], action = {}) => {
   switch (action.type) {
     case ADD:
-        if (state.find((elem) => elem.item_id === action.book.item_id)) {
-            return state;
-          }
+      if (state.find((elem) => elem.item_id === action.book.item_id)) {
+        return state;
+      }
       return [
         ...state,
         action.book,
@@ -35,15 +35,15 @@ const bookReducer = (state = [], action = {}) => {
         return book;
       });
     case REMOVE:
-        return state.filter((book) => book.item_id !== action.book.item_id);
-        case `${GET}/fulfilled`:
-          return action.payload;
+      return state.filter((book) => book.item_id !== action.book.item_id);
+    case `${GET}/fulfilled`:
+      return action.payload;
     default:
       return state;
   }
 };
 
 export {
-    addBook, updateBook, removeBook,
-  };
+  addBook, updateBook, removeBook,
+};
 export default bookReducer;
